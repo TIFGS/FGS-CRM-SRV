@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const permusuario_1 = require("../controllers/permusuario");
+const router = (0, express_1.Router)();
+router.get('/All/:id_usuario', permusuario_1.getAllPermuser);
+router.get('/AllIds/:id_usuario', permusuario_1.getPermuserIds);
+router.get('/:id_usuario', permusuario_1.getPermuser);
+router.delete('/:id', permusuario_1.deletePermuser);
+router.post('/', permusuario_1.postPermuser);
+router.put('/:id', permusuario_1.updatePermuser);
+exports.default = router;

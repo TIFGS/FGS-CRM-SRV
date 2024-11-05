@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const area_1 = require("../controllers/area");
+const router = (0, express_1.Router)();
+router.get('/', area_1.getAll);
+router.get('/getGroupByNombre/', area_1.getGroupByNombre);
+router.get('/getByplanta_idplanta/:id', area_1.getByplanta_idplanta);
+router.get('/:id', area_1.getById);
+router.delete('/:id', area_1.deleteArea);
+router.post('/', area_1.postArea);
+router.put('/:id', area_1.updateArea);
+exports.default = router;

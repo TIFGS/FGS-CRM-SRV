@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const oportunidadHistorico_1 = require("../controllers/oportunidadHistorico");
+const router = (0, express_1.Router)();
+router.get('/', oportunidadHistorico_1.getAll);
+router.get('/:id', oportunidadHistorico_1.getById);
+router.get('/resumen/:id', oportunidadHistorico_1.getPrecio);
+router.get('/getByDocumento/:id', oportunidadHistorico_1.getByDocumento);
+router.delete('/:id', oportunidadHistorico_1.deleteoportunidadHistorico);
+router.post('/', oportunidadHistorico_1.postoportunidadHistorico);
+router.put('/:id', oportunidadHistorico_1.updateoportunidadHistorico);
+exports.default = router;

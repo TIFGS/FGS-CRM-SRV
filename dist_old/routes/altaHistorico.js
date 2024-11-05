@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const altaHistorico_1 = require("../controllers/altaHistorico");
+const router = (0, express_1.Router)();
+router.get('/', altaHistorico_1.getAll);
+router.get('/:id', altaHistorico_1.getById);
+router.get('/resumen/:id', altaHistorico_1.getPrecio);
+router.get('/getByDocumento/:id', altaHistorico_1.getByDocumento);
+router.delete('/:id', altaHistorico_1.deletealtaHistorico);
+router.post('/', altaHistorico_1.postaltaHistorico);
+router.put('/:id', altaHistorico_1.updatealtaHistorico);
+exports.default = router;

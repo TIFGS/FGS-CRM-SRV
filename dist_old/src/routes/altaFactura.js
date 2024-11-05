@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const altaFactura_1 = require("../controllers/altaFactura");
+const router = (0, express_1.Router)();
+router.get('/', altaFactura_1.getAll);
+router.get('/:id', altaFactura_1.getById);
+router.get('/alta_idalta/:id', altaFactura_1.getByalta_idalta);
+router.get('/factura_idfactura/:id', altaFactura_1.getByfactura_idfactura);
+router.delete('/:id', altaFactura_1.deletealtaFactura);
+router.post('/', altaFactura_1.postaltaFactura);
+router.put('/:id', altaFactura_1.updatealtaFactura);
+exports.default = router;

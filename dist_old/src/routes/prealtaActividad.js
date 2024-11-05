@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const prealtaActividad_1 = require("../controllers/prealtaActividad");
+const router = (0, express_1.Router)();
+router.get('/', prealtaActividad_1.getAll);
+router.get('/:id', prealtaActividad_1.getById);
+router.get('/idDoc/:id', prealtaActividad_1.getByIdDoc);
+router.delete('/:id', prealtaActividad_1.del);
+router.post('/', prealtaActividad_1.post);
+router.put('/:id', prealtaActividad_1.update);
+exports.default = router;

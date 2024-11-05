@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const cotizacionesPrealta_1 = require("../controllers/cotizacionesPrealta");
+const router = (0, express_1.Router)();
+router.get('/', cotizacionesPrealta_1.getAll);
+router.get('/:id', cotizacionesPrealta_1.getById);
+router.get('/prealta_idPreAlta/:id', cotizacionesPrealta_1.getByprealta_idPreAlta);
+router.get('/cotizaciones_idcotizaciones/:id', cotizacionesPrealta_1.getBycotizaciones_idcotizaciones);
+router.delete('/:id', cotizacionesPrealta_1.deletecotizacionesPrealta);
+router.post('/', cotizacionesPrealta_1.postcotizacionesPrealta);
+router.put('/:id', cotizacionesPrealta_1.updatecotizacionesPrealta);
+exports.default = router;

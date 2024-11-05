@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const prospeccionesCotizaciones_1 = require("../controllers/prospeccionesCotizaciones");
+const router = (0, express_1.Router)();
+router.get('/', prospeccionesCotizaciones_1.getAll);
+router.get('/:id', prospeccionesCotizaciones_1.getById);
+router.get('/cotizaciones_idcotizaciones/:id', prospeccionesCotizaciones_1.getBycotizaciones_idcotizaciones);
+router.get('/prospecciones_idprospecciones/:id', prospeccionesCotizaciones_1.getByprospecciones_idprospecciones);
+router.delete('/:id', prospeccionesCotizaciones_1.deleteprospeccionesCotizaciones);
+router.post('/', prospeccionesCotizaciones_1.postprospeccionesCotizaciones);
+router.put('/:id', prospeccionesCotizaciones_1.updateprospeccionesCotizaciones);
+exports.default = router;

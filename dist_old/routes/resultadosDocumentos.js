@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const resultadosDocumentos_1 = require("../controllers/resultadosDocumentos");
+const router = (0, express_1.Router)();
+router.get('/tableroOportunidad/:id', resultadosDocumentos_1.tableroOportunidad);
+router.get('/tableroProspeccion/:id', resultadosDocumentos_1.tableroProspeccion);
+router.get('/tableroCotizacion/:id', resultadosDocumentos_1.tableroCotizacion);
+router.get('/tableroPrealta/:id', resultadosDocumentos_1.tableroPrealta);
+router.get('/tableroAlta/:id', resultadosDocumentos_1.tableroAlta);
+router.get('/tableroFactura/:id', resultadosDocumentos_1.tableroFactura);
+exports.default = router;

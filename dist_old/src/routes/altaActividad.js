@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const altaActividad_1 = require("../controllers/altaActividad");
+const router = (0, express_1.Router)();
+router.get('/', altaActividad_1.getAll);
+router.get('/:id', altaActividad_1.getById);
+router.get('/idDoc/:id', altaActividad_1.getByIdDoc);
+router.delete('/:id', altaActividad_1.del);
+router.post('/', altaActividad_1.post);
+router.put('/:id', altaActividad_1.update);
+exports.default = router;
